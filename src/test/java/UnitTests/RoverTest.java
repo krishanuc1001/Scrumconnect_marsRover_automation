@@ -1,5 +1,6 @@
+package UnitTests;
+
 import marsrover.Rover;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
