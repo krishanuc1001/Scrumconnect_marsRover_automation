@@ -67,6 +67,7 @@ direction in this case West and East respectively but position according to X an
 X,Y(0,2). So with our task clearly defined, Let’s look at the design.
 
 ### TASK
+(Automation with BDD approach)
 
 1. Write a test for Rover direction facing and positioning initialisation
 2. Write a test for moving the rover x and y position and location
@@ -77,10 +78,3 @@ X,Y(0,2). So with our task clearly defined, Let’s look at the design.
 1 2 N
 
 LMLMLMLMM
-
-Instructions:
-
-There is no right or wrong answer however we are keen to look at how you approach
-automation with BDD.
-Please create a private repo containing your solution on github.com and add the following
-account as a collaborator via settings | manage access: abstract-lgtm
