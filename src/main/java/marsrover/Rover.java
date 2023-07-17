@@ -12,6 +12,9 @@ public class Rover {
     public Rover() {
     }
 
+    public Rover(int upperRightX, int upperRightY) {
+    }
+
     public void setPosition(Integer x, Integer y, Integer facing) {
         this.x = x;
         this.y = y;
@@ -51,13 +54,13 @@ public class Rover {
     }
 
     public void move() {
-        if (facing == N) {
+        if (facing.equals(N)) {
             this.y++;
-        } else if (facing == E) {
+        } else if (facing.equals(E)) {
             this.x++;
-        } else if (facing == S) {
+        } else if (facing.equals(S)) {
             this.y--;
-        } else if (facing == W) {
+        } else if (facing.equals(W)) {
             this.x--;
         }
     }
@@ -78,5 +81,21 @@ public class Rover {
         rover.setPosition(3, 3, E);
         rover.process("MMRMMRMRRM");
         rover.printPosition(); // prints 5 1 E
+    }
+
+    public int getX() {
+        return 0;
+    }
+
+    public int getY() {
+        return 0;
+    }
+
+    public String getDirection() {
+        if (getX() > 0) {
+            return "N";
+        } else {
+            return "S";
+        }
     }
 }
