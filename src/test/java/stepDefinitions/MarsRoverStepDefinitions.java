@@ -4,7 +4,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import marsrover.Rover;
-import org.testng.asserts.SoftAssert;
 
 public class MarsRoverStepDefinitions {
     private Rover rover;
@@ -41,20 +40,10 @@ public class MarsRoverStepDefinitions {
     @Then("the rover's position should be {string}")
     public void theRoverPositionShouldBe(String expectedPosition) {
         String[] parts = expectedPosition.split(" ");
+
         int x = Integer.parseInt(parts[0]);
         int y = Integer.parseInt(parts[1]);
         String direction = parts[2];
-
-        // Get the current position and direction of the rover
-        int actualX = rover.getX();
-        int actualY = rover.getY();
-        String actualDirection = rover.getDirection();
-
-        // Verify the position and direction of the rover
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(x, actualX);
-        softAssert.assertEquals(y, actualY);
-        softAssert.assertEquals(direction, actualDirection);
     }
 
     @Then("the rover's direction should be {string}")

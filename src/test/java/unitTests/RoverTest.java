@@ -1,4 +1,4 @@
-package UnitTests;
+package unitTests;
 
 import marsrover.Rover;
 import org.testng.annotations.Test;
